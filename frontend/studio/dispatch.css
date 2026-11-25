@@ -1,0 +1,6 @@
+.score{padding:1rem 0;border-bottom:1px solid var(--s-line);}
+.score h2 span{font-size:1.4em;color:var(--s-accent);}
+.stage-bar{display:flex;gap:2px;margin:.6rem 0;}
+.dispatch-record{padding:1rem 0;border-bottom:1px solid var(--s-line);}
+.dispatch-body{display:flex;gap:1em;justify-content:space-between;}
+#refresh{margin-top:1rem;}

@@ -1,0 +1,13 @@
+.cut{border-bottom:1px solid var(--s-line);padding:1.15rem 0;}
+.cut h2,.score h2{display:flex;justify-content:space-between;gap:1em;align-items:baseline;}
+.cut h2 span,.cut time{font:.76em "Space Mono",monospace;color:var(--s-muted);}
+.chenille,.stage-bar{position:relative;height:28px;background:var(--s-panel);border-block:1px solid var(--s-line);}
+.chenille span{position:absolute;inset-block:0;transition:opacity .18s cubic-bezier(.1,.8,.2,1);}
+.chenille span:hover{opacity:.55;}
+.chenille span.checked,.stage-bar .checked{background:oklch(79% .105 139);}
+.chenille span.recorded,.stage-bar .recorded{background:var(--s-accent);}
+.chenille span.draft,.stage-bar .draft{background:oklch(52% .049 49);}
+.cut ol{padding:0;margin:.8rem 0 0;list-style:none;}
+.cut li{display:grid;gap:.6rem;grid-template-columns:minmax(105px,1fr) 2fr minmax(60px,.7fr);padding:.5rem 0;border-bottom:1px dotted var(--s-line);}
+.cut li .checked{color:var(--s-ok);}
+.cut li .recorded{color:var(--s-accent);}
