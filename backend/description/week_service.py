@@ -17,3 +17,7 @@ def calculate(cx,week):
         grouped[row["film"]].append(row)
     return {"films":[film | lower_case_rate(grouped[film["code"]]) for film in films],
             "summary":lower_case_rate(cues)}
+
+def stage_snapshot(cx,week):
+    """Frozen per-cue stages recorded alongside a scheduled report."""
+    return {row["code"]:row["stage"] for row in weekly_cues(cx,week)}

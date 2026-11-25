@@ -25,7 +25,7 @@ def process(connection):
     try:
         with connection.transaction():
             connection.execute("UPDATE app_jobs SET status='running' WHERE id=%s", (job["id"],))
-            result = domain.run_job(connection, job["kind"], job["payload"])
+            result = domain.run_job(connection, job["kind"], job["payload"], job["id"])
             connection.execute(
                 "UPDATE app_jobs SET status='done',result=%s,finished_at=now() WHERE id=%s",
                 (Jsonb(jsonable_encoder(result)), job["id"]),

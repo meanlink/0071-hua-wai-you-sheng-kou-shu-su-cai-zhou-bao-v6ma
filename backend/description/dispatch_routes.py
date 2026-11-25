@@ -29,5 +29,5 @@ def recall(dispatch_id:int,_=Depends(require("reviewer"))):
     with db() as cx:
         row=cancel(cx,dispatch_id)
         if not row:
-            raise HTTPException(409,"只能取消还在待分发状态的周报")
+            raise HTTPException(409,"只能撤回尚未送达的周报")
         return row
